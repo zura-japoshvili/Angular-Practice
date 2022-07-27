@@ -1,0 +1,13 @@
+.register-form{
+    display: flex;
+    flex-direction: column;
+    .submit-btn{
+        width: 120px;
+        height: 40px;
+        background-color: #4d4dda;
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 16px;
+        border: none;
+    }
+}

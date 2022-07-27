@@ -1,0 +1,30 @@
+<form class="register-form" [formGroup]="registerFormGroup">
+    <div>
+        <label>*E-mail</label>
+        <input type="email" formControlName='email'>
+    </div>
+    <div>
+        <label>*Password</label>
+        <input type="password" formControlName="password">
+    </div>
+    <div>
+        <label>*Confirm Password</label>
+        <input type="password" formControlName="confirmPass">
+    </div>
+    <div>
+        <label>*Nickname</label>
+        <input type="text" formControlName="nickname">
+    </div>
+    <div>
+        <label>*Phone Number</label>
+        <input type="tel" formControlName="phoneNumber">
+    </div>
+    <div>
+        <label>*Website</label>
+        <input type="text" formControlName="website">
+    </div>
+    <div>
+        <input type="checkbox" formControlName="agree"><label>I have read agreement</label>
+    </div>
+    <button class="submit-btn"  (click)="onClick(); $event.preventDefault()">Register</button>
+</form>
