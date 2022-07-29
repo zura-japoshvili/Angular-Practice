@@ -26,5 +26,28 @@
     <div>
         <input type="checkbox" formControlName="agree"><label>I have read agreement</label>
     </div>
-    <button class="submit-btn"  (click)="onClick(); $event.preventDefault()">Register</button>
+    <ng-container *ngIf="updateBtn">
+      <button class="update-btn" [disabled]="registerFormGroup.invalid"  (click)="updateData(); $event.preventDefault()">Update</button>
+    </ng-container>
+    <ng-container *ngIf="!updateBtn">
+      <button class="submit-btn" [disabled]="registerFormGroup.invalid"  (click)="register(); $event.preventDefault()">Register</button>
+    </ng-container>
+
+
+
 </form>
+
+<ng-container *ngFor="let item of userData; index as i">
+    <div class="user-data">
+        <div class="user-btns">
+            <button (click)="deleteData(i)">Delete {{i}}</button>
+            <button (click)="updateForm(i)">Edit</button>
+        </div>
+        <p>{{item.email}}</p>
+        <p>{{item.password}}</p>
+        <p>{{item.confirmPass}}</p>
+        <p>{{item.nickname}}</p>
+        <p>{{item.phoneNumber}}</p>
+        <p>{{item.website}}</p>
+    </div>
+</ng-container>

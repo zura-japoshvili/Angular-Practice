@@ -1,6 +1,9 @@
 .register-form{
     display: flex;
     flex-direction: column;
+    > div{
+        width: 420px;
+    }
     .submit-btn{
         width: 120px;
         height: 40px;
