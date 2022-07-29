@@ -11,8 +11,8 @@ import { passwordValidator } from './pass-validator';
 export class RegisterComponent implements OnInit {
   public registerFormGroup = new FormGroup({});
 
-  public updateBtn:boolean = false;
   public userData:any = [];
+  public updateBtn:boolean = false;
   private userDataIndex:number = 0;
   constructor() { }
 

@@ -1,16 +1,71 @@
 .register-form{
     display: flex;
     flex-direction: column;
+    padding-left: 40%;
     > div{
         width: 420px;
+        margin-bottom: 10px;
+      .form-inputs{
+        width: 200px;
+        height: 25px;
+        border-radius: 5px;
+      }
+      label{
+        margin-right: 15px;
+        .required-red{
+          color: #e83636;
+        }
+      }
+    }
+    >button{
+      width: 120px;
+      height: 40px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
     }
     .submit-btn{
-        width: 120px;
-        height: 40px;
         background-color: #4d4dda;
-        border-radius: 8px;
-        color: #ffffff;
-        font-size: 16px;
-        border: none;
     }
+    .update-btn{
+      background-color: #8ee836;
+    }
+}
+.userWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  .user-data{
+    padding: 15px;
+    width: 350px;
+    height: 250px;
+    background-color: #fa9cc4;
+    border-radius: 10px;
+    margin: 10px;
+    .user-btns{
+      > button{
+        width: 80px;
+        height: 30px;
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+      }
+      .delete-btn{
+        background-color: #e83636;
+        margin-right: 10px;
+      }
+      .edit-btn{
+        background-color: #7070d7;
+      }
+    }
+    p{
+      font-size: 14px;
+      font-weight: 700;
+      color: orangered;
+    }
+  }
 }
