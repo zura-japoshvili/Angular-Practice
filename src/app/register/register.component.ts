@@ -40,12 +40,7 @@ export class RegisterComponent implements OnInit {
 
   }
   public updateForm(index: number): void{
-      this.registerFormGroup.get('email')?.setValue(this.userData[index].email);
-      this.registerFormGroup.get('password')?.setValue(this.userData[index].password);
-      this.registerFormGroup.get('confirmPass')?.setValue(this.userData[index].confirmPass);
-      this.registerFormGroup.get('nickname')?.setValue(this.userData[index].nickname);
-      this.registerFormGroup.get('phoneNumber')?.setValue(this.userData[index].phoneNumber);
-      this.registerFormGroup.get('website')?.setValue(this.userData[index].website);
+      this.registerFormGroup.setValue(this.userData[index]);
 
       this.userDataIndex = index;
       this.updateBtn = true;
