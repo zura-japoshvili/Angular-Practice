@@ -1,0 +1,16 @@
+.currency-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > div {
+    margin-bottom: 20px;
+     > input{
+       margin-right: 15px;
+       width: 200px;
+       height: 30px;
+       border-radius: 5px;
+     }
+  }
+}

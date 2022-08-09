@@ -1,0 +1,18 @@
+.currency-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.currency-form > div {
+  margin-bottom: 20px;
+}
+.currency-form > div > input {
+  margin-right: 15px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=exchange-currency.component.css.map */
