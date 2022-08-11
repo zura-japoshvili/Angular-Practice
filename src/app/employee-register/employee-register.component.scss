@@ -1,0 +1,39 @@
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    margin-bottom: 15px;
+    label{
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    input{
+      width: 200px;
+      height: 30px;
+      border-radius: 8px;
+    }
+  }
+  button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #4d4dda;
+    border: none;
+    color: #ffffff;
+  }
+}
+.employeesWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  > div{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-left: 20px;
+  }
+}
