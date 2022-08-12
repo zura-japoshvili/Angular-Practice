@@ -25,7 +25,7 @@
     <div>
       <div>
         <button (click)="onEdit(Employee.id)">Edit</button>
-        <button>Delete</button>
+        <button (click)="deleteEmp(Employee.id)">Delete</button>
       </div>
       <p>Name: {{Employee.name}}</p>
       <p>Salary: {{Employee.salary}}</p>

@@ -44,7 +44,6 @@ export class EmployeeRegisterComponent implements OnInit {
   // type number causes Error : --> error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
   //   Type 'undefined' is not assignable to type 'number'.
   public onEdit(id: any){
-    console.log(typeof id)
     this.myService.getIdData(id).pipe(
       tap((data) =>{
         //Update form without data.id -- id causes error
@@ -58,21 +57,30 @@ export class EmployeeRegisterComponent implements OnInit {
       })
     ).subscribe()
   }
-  public updateData(){
-    console.log(123123)
-    this.myService.updateEmployee(this.currentID, this.employeeForm.value).subscribe();
+  private returnIndex(): number{
     let index = 0;
     for (let i = 0; i < this.employees.length; i++){
       if (this.employees[i].id === this.currentID){
-        index = i;
-        break;
+          index = i;
+          break;
       }
     }
-    this.employees[index] = this.employeeForm.value;
-
     console.log(index, this.currentID)
+    return index;
+  }
+  public updateData(){
+    console.log(123123)
+    this.myService.updateEmployee(this.currentID, this.employeeForm.value).subscribe();
+    this.employees[this.returnIndex()] = this.employeeForm.value;
 
     this.updateBool = false;
-    this.currentID = 0;
   }
+  public deleteEmp(id: any){
+    this.currentID = id;
+    this.myService.deleteEmployee(id).subscribe();
+    this.employees.splice(this.returnIndex(), 1);
+
+    this.updateBool = false;
+  }
+
 }
