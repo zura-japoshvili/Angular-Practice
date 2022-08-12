@@ -25,11 +25,9 @@ export class HTTPServiceService {
     return this.http.get<EmployeesForm>(`${this.baseUrl}/employees/${id}`)
   }
   public updateEmployee(id: number, employee: object){
-    console.log(9999999)
     return this.http.put(`${this.baseUrl}/employees/${id}`, employee);
   }
   public deleteEmployee(id: number){
-    console.log(9999999)
     return this.http.delete(`${this.baseUrl}/employees/${id}`);
   }
 }

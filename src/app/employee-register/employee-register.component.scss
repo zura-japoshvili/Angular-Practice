@@ -37,3 +37,16 @@ form{
     padding-left: 20px;
   }
 }
+.buttonCont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  button{
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: mediumorchid;
+    border: none;
+    color: #ffffff;
+  }
+}

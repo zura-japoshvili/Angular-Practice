@@ -16,6 +16,9 @@ export class EmployeeRegisterComponent implements OnInit {
 
   public updateBool = false;
   private currentID = 0;
+  public showMore = false;
+  private moreIsActive = false;
+  private pages = 3;
 
   public employeeForm  = new FormGroup(
     {name: new FormControl('', Validators.required),
@@ -31,7 +34,30 @@ export class EmployeeRegisterComponent implements OnInit {
   public getEmployees(){
     this.myService.showEmployees().pipe(
       tap((data) =>  {
-        this.employees = data;
+
+        if(data.length > this.pages &&  !this.moreIsActive){
+          console.log(1)
+          this.showMore = true;
+          this.employees = data.filter((value, index) => index <= this.pages);
+        }else if(data.length > this.pages && this.moreIsActive){
+          if (data.length > (this.pages + 4) ){
+            console.log(2);
+            this.showMore = true;
+            this.pages += 4;
+            this.employees = data.filter((value, index) => index <= this.pages);
+          }else {
+            console.log(3)
+            this.showMore = false;
+            this.pages = this.employees.length;
+            this.employees = data.filter((value, index) => index <= this.pages);
+          }
+        }
+        else{
+          console.log(4)
+          this.showMore = false;
+          this.employees = data;
+        }
+
       })
     ).subscribe()
   }
@@ -40,6 +66,8 @@ export class EmployeeRegisterComponent implements OnInit {
     this.myService.postRequest(this.employeeForm.value).subscribe((value:EmployeesForm) => {
       this.employees.push(value);
     });
+
+    this.getEmployees();
   }
   // type number causes Error : --> error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
   //   Type 'undefined' is not assignable to type 'number'.
@@ -81,6 +109,11 @@ export class EmployeeRegisterComponent implements OnInit {
     this.employees.splice(this.returnIndex(), 1);
 
     this.updateBool = false;
-  }
 
+    this.getEmployees()
+  }
+  public showMoreEmp(){
+    this.moreIsActive = true;
+    this.getEmployees();
+  }
 }
