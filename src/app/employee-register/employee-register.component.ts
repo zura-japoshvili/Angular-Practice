@@ -35,20 +35,20 @@ export class EmployeeRegisterComponent implements OnInit {
     this.myService.showEmployees().pipe(
       tap((data) =>  {
 
-        if(data.length > this.pages &&  !this.moreIsActive){
-          console.log(1)
+        if(data.length - 1 > this.pages &&  !this.moreIsActive){
+          console.log(data.length, this.pages);
           this.showMore = true;
           this.employees = data.filter((value, index) => index <= this.pages);
         }else if(data.length > this.pages && this.moreIsActive){
-          if (data.length > (this.pages + 4) ){
-            console.log(2);
+          this.pages += 4;
+          console.log(data.length, this.pages);
+          if (data.length - 1 > this.pages ){
             this.showMore = true;
-            this.pages += 4;
             this.employees = data.filter((value, index) => index <= this.pages);
           }else {
             console.log(3)
             this.showMore = false;
-            this.pages = this.employees.length;
+            this.pages = data.length - 1;
             this.employees = data.filter((value, index) => index <= this.pages);
           }
         }
