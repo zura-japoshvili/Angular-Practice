@@ -21,11 +21,11 @@ export class UserService {
   }
 
   public loginUser(user: any){
-    return this.http.post(`${environment.baseUrl}/login`, user)
+    return this.http.post(`${environment.baseUrl}/users`, user)
   }
 
   public registerUser(user: any){
-    return this.http.post(`${environment.baseUrl}/register`, user)
+    return this.http.post(`${environment.baseUrl}/users`, user)
   }
 
   public updateUser(id: string, user: any){

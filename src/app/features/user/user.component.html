@@ -39,22 +39,22 @@
     <div class="person" *ngFor="let item of itemInArr; index as i">
       <h1>Data of User</h1>
       <div>
-        <span>Gmail:</span>{{item.email}}
+        <p>Gmail: {{item.email}}</p>
       </div>
       <div>
-        <span>password:</span> {{item.confirmPassword}}
+        <p>password: {{item.confirmPassword}}</p>
       </div>
       <div>
-        <span>Nickname:</span> {{item.Nickname}}
+        <p>Nickname: {{item.Nickname}}</p>
       </div>
       <div>
-        <span>phone:</span> {{item.phoneNumber}}
+        <p>phone: {{item.phoneNumber}}</p>
       </div>
       <div>
-        <span>salary:</span> {{item.salary}}₾
+        <p>salary: {{item.salary}}</p>
       </div>
       <div>
-        <span>website:</span> {{item.website}}
+        <p>website: {{item.website}}</p>
       </div>
       <div class="btn-container">
         <button (click)="updateForm(item)" class="edit" *ngIf="loggedUserID === item.id.toString()">Edit</button>

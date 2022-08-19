@@ -19,5 +19,27 @@
       "id": 3
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "japoshh@gmail.com",
+      "password": "123123123",
+      "confirmPassword": "123123123",
+      "Nickname": "zurazura",
+      "phoneNumber": "+995123123123",
+      "salary": 1,
+      "website": "https://angular.io/guide/http",
+      "checkbox": true,
+      "id": 3
+    },
+    {
+      "email": "japoshh@gmail.com",
+      "password": "123123123",
+      "id": 4
+    },
+    {
+      "email": "japoshh@gmail.com",
+      "password": "123123123",
+      "id": 5
+    }
+  ]
 }

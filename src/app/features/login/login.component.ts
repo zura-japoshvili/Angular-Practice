@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
   register() {
     this.userService.registerUser(this.formGroup.value).pipe(
       tap(() => {
-        alert('User succesfully registered')
+        alert('User is successfully registered')
         this.formGroup.reset()
       }),
       catchError(() => {
