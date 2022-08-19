@@ -56,9 +56,9 @@
       <div>
         <p>website: {{item.website}}</p>
       </div>
-      <div class="btn-container">
-        <button (click)="updateForm(item)" class="edit" *ngIf="loggedUserID === item.id.toString()">Edit</button>
-        <button (click)="delete(item.id)" class="edit1" *ngIf="loggedUserID === item.id.toString()">Delete </button>
+      <div class="btn-container" *ngIf="loggedUserID === item.id.toString()">
+        <button (click)="updateForm(item)" class="edit">Edit</button>
+        <button (click)="delete(item.id)" class="edit1">Delete </button>
       </div>
     </div>
   </div>

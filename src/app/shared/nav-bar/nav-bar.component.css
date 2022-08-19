@@ -29,11 +29,11 @@
   background-color: #361bd5;
 }
 .header-container button {
-  background-color: transparent;
+  padding: 10px;
   cursor: pointer;
   height: 100%;
-  border: 0;
-  color: white;
+  border: 1px solid red;
+  color: red;
 }
 .header-container button:hover {
   background-color: #361bd5;
