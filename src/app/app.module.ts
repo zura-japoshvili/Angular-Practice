@@ -1,27 +1,30 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { ExchangeCurrencyComponent } from './exchange-currency/exchange-currency.component';
-import {HttpClientModule} from "@angular/common/http";
-import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
-
+import { LoginComponent } from './features/login/login.component';
+import { SharedModule } from './shared/shared.module';
+import { UserComponent } from './features/user/user.component';
+import { ExchangeCurrencyComponent } from './features/exchange-currency/exchange-currency.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
+    LoginComponent,
+    UserComponent,
     ExchangeCurrencyComponent,
-    EmployeeRegisterComponent,
+
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

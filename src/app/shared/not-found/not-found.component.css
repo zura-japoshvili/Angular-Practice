@@ -1,0 +1,20 @@
+.error-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.error-wrapper h1 {
+  color: red;
+}
+.error-wrapper button {
+  background-color: #4d4dda;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=not-found.component.css.map */

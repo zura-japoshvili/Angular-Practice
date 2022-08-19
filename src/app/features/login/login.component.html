@@ -1,0 +1,50 @@
+<h1>Login</h1>
+<form [formGroup]="loginForm" class="login-form">
+  <div>
+    <label>Email: </label>
+    <input type="email" formControlName="email" required>
+  </div>
+  <div>
+    <label>Password: </label>
+    <input type="password" formControlName="password" required>
+  </div>
+  <button (click)="login()">login</button>
+</form>
+
+<h1>Register</h1>
+<form class="register-form" [formGroup]="formGroup">
+  <div>
+    <label>E-mail:</label>
+    <input type="email" class="reg-input" formControlName="email" required>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" class="reg-input" formControlName="password" required>
+  </div>
+  <div>
+    <label>Confirm Password:</label>
+    <input type="password" class="reg-input" formControlName="confirmPassword" required>
+  </div>
+  <div>
+    <label>Nickname:</label>
+    <label><input type="text" class="reg-input" formControlName="Nickname" required></label>
+  </div>
+  <div>
+    <label>Phone Number:</label>
+    <input type="tel" class="reg-input" formControlName="phoneNumber" required>
+  </div>
+  <div>
+    <label>Salary:</label>
+    <input type="number" class="reg-input" formControlName="salary" required>
+  </div>
+  <div>
+    <label>Website:</label>
+    <input class="reg-input" formControlName="website" required>
+  </div>
+  <div>
+    <input type="checkbox"  formControlName="checkbox" required>
+    <span>I have read the <a class="agreement-link" href="#"> agreement</a></span>
+  </div>
+  <button class="register-btn" [disabled]="formGroup.invalid" (click)="register()">Register</button>
+</form>
+

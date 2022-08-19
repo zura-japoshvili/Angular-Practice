@@ -1,0 +1,9 @@
+<div class="header-container">
+  <ul class="nav-container">
+    <li routerLink="/login" *ngIf="!(isUserLoggedIn | async)" routerLinkActive="activeLink">Login</li>
+    <li routerLink="/users" *ngIf="isUserLoggedIn | async" routerLinkActive="activeLink">Users</li>
+    <li routerLink="/currency" *ngIf="(isUserLoggedIn | async) && isUserSalaryEligible" routerLinkActive="activeLink">Currency Converter</li>
+    <li routerLink="/employees" routerLinkActive="activeLink">Employees</li>
+  </ul>
+  <button (click)="logout()" *ngIf="isUserLoggedIn | async">Logout</button>
+</div>

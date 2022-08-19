@@ -1,0 +1,40 @@
+<form [formGroup]="employeeForm">
+  <div>
+    <label>Name</label>
+    <input type="text" placeholder="Type employee name" formControlName="name">
+  </div>
+  <div>
+    <label>Salary</label>
+    <input type="number" placeholder="Type employee salary" formControlName="salary" value="0">
+  </div>
+  <div>
+    <label>Age</label>
+    <input type="number" placeholder="Type employee age" formControlName="age" value="0">
+  </div>
+  <ng-container *ngIf="!updateBool">
+    <button (click)="onRegister()">Register</button>
+  </ng-container>
+  <ng-container *ngIf="updateBool">
+    <button (click)="updateData()">Update</button>
+  </ng-container>
+
+
+</form>
+<div class="employeesWrapper">
+  <ng-container *ngFor="let Employee of employees">
+    <div>
+      <div>
+        <button (click)="onEdit(Employee.id)">Edit</button>
+        <button (click)="deleteEmp(Employee.id)">Delete</button>
+      </div>
+      <p>Name: {{Employee.name}}</p>
+      <p>Salary: {{Employee.salary}}</p>
+      <p>Age: {{Employee.age}}</p>
+    </div>
+  </ng-container>
+</div>
+<div class="buttonCont">
+  <ng-container *ngIf="showMore">
+    <button  (click)="showMoreEmp()">Show More</button>
+  </ng-container>
+</div>

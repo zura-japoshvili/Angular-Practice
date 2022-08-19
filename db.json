@@ -1,28 +1,23 @@
 {
   "employees": [
     {
-      "name": "Zura",
-      "salary": 123,
-      "age": 123,
+      "name": "Zuuuura",
+      "salary": 400,
+      "age": 21,
+      "id": 1
+    },
+    {
+      "name": "Zuuuura",
+      "salary": 400,
+      "age": 21,
       "id": 2
     },
     {
-      "name": "12312",
-      "salary": 312312,
-      "age": 312,
-      "id": 5
-    },
-    {
-      "name": "Zaazzzzzzzz",
-      "salary": 123,
-      "age": 12,
-      "id": 8
-    },
-    {
-      "name": "Zaazzzzzzzz",
-      "salary": 123,
-      "age": 12,
-      "id": 9
+      "name": "Zuuuura",
+      "salary": 400,
+      "age": 21,
+      "id": 3
     }
-  ]
+  ],
+  "users": []
 }

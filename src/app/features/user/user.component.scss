@@ -1,0 +1,106 @@
+.container {
+    width: 500px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin: 20px auto 0;
+
+ 
+    .item {
+       flex-basis: 35%;
+       margin-bottom: 20px;
+       width: 300px;
+ 
+    }
+ 
+ 
+    input {
+       min-height: 25px;
+       border-radius: 5px;
+    }
+     
+    a {
+       position: relative;
+       bottom: 8px;
+       left: 8px;
+    }
+ 
+ 
+    .box {
+       width: 16px;
+    }
+ 
+    button {
+       font-size: 20px;
+       cursor: pointer;
+       margin-bottom: 20px;
+ 
+    }
+
+    .agreement-span{
+      position: relative;
+      bottom: 7px;
+      left: 5px;
+    }
+
+    .agreement-link{
+      text-decoration: none;
+    }
+ }
+ 
+ .edit {
+    width: 110px;
+    height: 30px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(83, 83, 176);
+    color: white;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 5px;
+ }
+ .edit1 {
+    width: 110px;
+    height: 30px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(83, 83, 176);
+    color: white;
+    border: none;
+    border-radius: 5px;
+ }
+ 
+ .person {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 370px;
+    box-shadow: 6px 11px 38px 3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 6px 11px 38px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 11px 38px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+ 
+    h1 {
+       margin-left: 25px;
+ 
+    }
+ 
+    span {
+       font-size: 17px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       color: darkred;
+       margin-left: 25px;
+    }
+
+    .btn-container{
+        display: flex;
+        margin-top: 15px;
+        justify-content: space-evenly;
+    }
+ }
