@@ -47,6 +47,12 @@
       "salary": 118,
       "age": 310,
       "id": 8
+    },
+    {
+      "name": "asdasasdasd",
+      "salary": 2000,
+      "age": 211,
+      "id": 9
     }
   ],
   "users": [
@@ -56,7 +62,7 @@
       "confirmPassword": "123123123",
       "Nickname": "zurazura",
       "phoneNumber": "+995123123123",
-      "salary": 1,
+      "salary": 1000,
       "website": "https://angular.io/guide/http",
       "checkbox": true,
       "id": 3
