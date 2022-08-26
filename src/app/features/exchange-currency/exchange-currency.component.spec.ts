@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExchangeCurrencyComponent } from './exchange-currency.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 describe('ExchangeCurrencyComponent', () => {
   let component: ExchangeCurrencyComponent;
@@ -8,7 +9,8 @@ describe('ExchangeCurrencyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExchangeCurrencyComponent ]
+      declarations: [ ExchangeCurrencyComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });
@@ -18,8 +20,8 @@ describe('ExchangeCurrencyComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

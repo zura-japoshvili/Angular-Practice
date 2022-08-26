@@ -21,7 +21,6 @@ export class UserService {
   }
 
   public loginUser(user: any){
-    console.log(1231243124)
     return this.http.post(`${environment.baseUrl}/login`, user)
   }
 

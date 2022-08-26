@@ -18,6 +18,7 @@ export class ExchangeCurrencyComponent implements OnInit {
   private secondCur = 'null';
 
   constructor(private myService: ExchangeCurrencyService ) { }
+
   public getData(FC:string, SC:string, amount: number, pos:string) {
     return this.myService.getRequest(FC, SC).subscribe(value => {
       this.setData(value.conversion_rate, amount, pos);

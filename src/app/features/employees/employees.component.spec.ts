@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeesComponent } from './employees.component';
+import {HttpClientModule} from "@angular/common/http";
 
 describe('EmployeesComponent', () => {
   let component: EmployeesComponent;
@@ -8,7 +9,8 @@ describe('EmployeesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmployeesComponent ]
+      declarations: [ EmployeesComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
 
@@ -17,7 +19,14 @@ describe('EmployeesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should ', function () {
+    expect(component['moreIsActive']).toEqual(false);
+    component.showMoreEmp();
+    expect(component['moreIsActive']).toEqual(true);
   });
+  it('should ', function () {
+    expect(component['currentID']).toEqual(0);
+    expect(component.deleteEmp(arguments))
+  });
+
 });
